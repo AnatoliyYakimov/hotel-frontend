@@ -7,6 +7,7 @@ import {RoomsListComponent} from './rooms-list/rooms-list.component';
 import {RoomDetailsComponent} from './room-details/room-details.component';
 import {RoomsListPageComponent} from './pages/rooms-list-page/rooms-list-page.component';
 import {RoomDetailsPageComponent} from './room-details-page/room-details-page.component';
+import {ROOM_SERVICE_PROVIDER} from './rooms.service';
 
 
 @NgModule({
@@ -21,6 +22,9 @@ import {RoomDetailsPageComponent} from './room-details-page/room-details-page.co
     CommonModule,
     BrowserModule,
     HttpClientModule
+  ],
+  providers: [
+    ROOM_SERVICE_PROVIDER
   ]
 })
 export class RoomsModule {
