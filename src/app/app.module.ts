@@ -8,6 +8,7 @@ import {HeaderComponent} from './header/header.component';
 import {BodyComponent} from './body/body.component';
 import {FooterComponent} from './footer/footer.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {InterceptorsProvider} from './interceptors/interceptors-provider';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatToolbarModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [
+    ...InterceptorsProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
