@@ -10,7 +10,7 @@ describe('RoomDetailsComponent', () => {
     TestBed.configureTestingModule({
       declarations: [RoomDetailsComponent]
     })
-      .compileComponents();
+    .compileComponents();
   }));
 
   beforeEach(() => {

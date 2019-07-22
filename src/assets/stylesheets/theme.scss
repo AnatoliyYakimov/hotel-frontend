@@ -38,9 +38,9 @@ $custom-blue: (
 );
 
 $hotel-app-primary: mat-palette($custom-blue, 700, 100, 500);
-$hotel-app-accent:  mat-palette($mat-amber, A400, A100, A700);
+$hotel-app-accent: mat-palette($mat-amber, A400, A100, A700);
 
-$hotel-app-warn:    mat-palette($mat-red);
+$hotel-app-warn: mat-palette($mat-red);
 
 $hotel-app-theme: mat-light-theme($hotel-app-primary, $hotel-app-accent, $hotel-app-warn);
 
