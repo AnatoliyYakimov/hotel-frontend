@@ -1,0 +1,19 @@
+@import "/~src/assets/stylesheets/variables";
+
+.footer {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  background-color: $primary;
+  color: white;
+  font-size: medium;
+  margin-top: 60px;
+  padding-top: 10px;
+
+  .flex-item {
+    text-align: center;
+  }
+}
+
+
+

@@ -9,13 +9,15 @@ import {BodyComponent} from './body/body.component';
 import {FooterComponent} from './footer/footer.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {InterceptorsProvider} from './interceptors/interceptors-provider';
+import {HomePageComponent} from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BodyComponent,
-    FooterComponent
+    FooterComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
