@@ -1,33 +1,31 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {MatButtonModule, MatToolbarModule} from '@angular/material';
-import {HeaderComponent} from './header/header.component';
-import {BodyComponent} from './body/body.component';
-import {FooterComponent} from './footer/footer.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {InterceptorsProvider} from './interceptors/interceptors-provider';
-import {HomePageComponent} from './home-page/home-page.component';
+import {INTERCEPTOR_PROVIDER} from './_interceptors/interceptors-provider';
+import {CoreModule} from './core/core.module';
+import {SharedModule} from './_shared/shared.module';
+import {HttpClientModule} from '@angular/common/http';
+import {MatNativeDateModule} from '@angular/material';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    BodyComponent,
-    FooterComponent,
-    HomePageComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    CoreModule,
+    SharedModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule
+    MatNativeDateModule
   ],
   providers: [
-    ...InterceptorsProvider
+    ...INTERCEPTOR_PROVIDER,
+    {provide: LOCALE_ID, useValue: 'ru-RU'}
   ],
   bootstrap: [AppComponent]
 })

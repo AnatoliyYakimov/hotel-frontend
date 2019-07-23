@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomePageComponent
+  },
+  {
+    path: 'rooms',
+    loadChildren: './pages/rooms/rooms-pages.module#RoomsPagesModule'
   }
 ];
 

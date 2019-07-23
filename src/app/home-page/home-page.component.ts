@@ -6,6 +6,8 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
+  checkIn: Date = new Date(Date.now());
+  checkOut: Date = new Date(Date.now());
 
   constructor() {
   }

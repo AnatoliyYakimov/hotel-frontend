@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Room} from '../../../_shared/entities/room/room';
 
 @Component({
   selector: 'app-rooms-list',
@@ -6,7 +7,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./rooms-list.component.scss']
 })
 export class RoomsListComponent implements OnInit {
-
+  @Input() rooms: Room[] = [];
   constructor() {
   }
 

@@ -1,8 +1,8 @@
 import {Injectable, Provider} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Room} from '../_shared/entities/room/room';
-import {environment} from '../../environments/environment';
+import {Room} from '../../_shared/entities/room/room';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class RoomsService {
   }
 
   getAllRooms(): Observable<Room[]> {
-    return this.http.get<Room[]>(this.API + 'rooms/');
+    return this.http.get<Room[]>(this.API + '/rooms');
   }
 
   getRoomById(id: number): Observable<Room> {

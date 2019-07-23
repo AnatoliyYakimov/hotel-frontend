@@ -1,8 +1,8 @@
-@import "/~src/assets/stylesheets/variables";
+@import "../../../assets/stylesheets/variables";
 
 .footer {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   flex-direction: column;
   background-color: $primary;
   color: white;

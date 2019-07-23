@@ -7,16 +7,44 @@
   background: url(../../assets/images/hotel.jpeg) center;
   color: white;
   text-align: center;
-  padding-top: 7%;
+  padding-top: 4%;
+}
+
+/* Прихоть Ани
+.SVINOHARYA_BUTTON{
+  height: 1500px;
+  width: 1500px;
+  font-size: 200px;
+}*/
+
+.date-row {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 25px;
+
+  .date-col {
+    text-align: left;
+    flex-direction: column;
+    margin: 10px;
+
+    .datepicker {
+      flex-wrap: wrap;
+      padding: 5px 5px 0 5px;
+      //background-color: rgba(255,255,255,0.88);
+      //border: white;
+    }
+  }
 }
 
 .landing-button {
-  width: 300px;
+  width: 275px;
   height: 50px;
   line-height: 50px;
   font-size: x-large;
   color: white;
-  margin: 40px auto 0;
 }
 
 .content {
