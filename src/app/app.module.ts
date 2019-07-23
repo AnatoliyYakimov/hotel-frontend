@@ -8,7 +8,7 @@ import {INTERCEPTOR_PROVIDER} from './_interceptors/interceptors-provider';
 import {CoreModule} from './core/core.module';
 import {SharedModule} from './_shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
-import {MatNativeDateModule} from '@angular/material';
+import {MatMomentDateModule} from '@angular/material-moment-adapter';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import {MatNativeDateModule} from '@angular/material';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatNativeDateModule
+    MatMomentDateModule
   ],
   providers: [
     ...INTERCEPTOR_PROVIDER,
