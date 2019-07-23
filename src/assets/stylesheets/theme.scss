@@ -2,23 +2,14 @@
 
 @include mat-core();
 
-//Colour constants
-
-$primary-dark: #2D81B7;
-$primary: #17BEBB;
-$primary-light: #C0FDFB;
-
-$accent-dark: #FFAB00;
-$accent: #FFC400;
-$accent-light: #FFE57F;
-
+@import "variables";
 //Font-family
 $theme-font-family: Roboto, "Helvetica Neue", sans-serif;
 
 $custom-blue: (
-  100: #C0FDFB,
-  500: #17BEBB,
-  700: #2D81B7,
+  100: $primary-light,
+  500: $primary,
+  700: $primary-dark,
   contrast: (
     50: $black-87-opacity,
     100: $black-87-opacity,
@@ -37,7 +28,8 @@ $custom-blue: (
   )
 );
 
-$hotel-app-primary: mat-palette($custom-blue, 700, 100, 500);
+//$hotel-app-primary: mat-palette($custom-blue, 700, 100, 500);
+$hotel-app-primary: mat-palette($custom-blue, 500, 100, 700);
 $hotel-app-accent: mat-palette($mat-amber, A400, A100, A700);
 
 $hotel-app-warn: mat-palette($mat-red);
