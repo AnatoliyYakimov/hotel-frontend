@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import * as moment from 'moment';
+import {Moment} from 'moment';
 
 @Component({
   selector: 'app-home-page',
@@ -6,8 +8,8 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-  checkIn: Date = new Date(Date.now());
-  checkOut: Date = new Date(Date.now());
+  checkIn: Moment = moment(Date.now());
+  checkOut: Moment = moment(this.checkIn).add(1, 'days');
 
   constructor() {
   }
