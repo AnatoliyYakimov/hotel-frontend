@@ -35,7 +35,7 @@ import {MatButtonModule} from '@angular/material/button';
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() coreModule?: CoreModule) {
-    if (coreModule != undefined && isDevMode()) {
+    if (coreModule !== undefined && isDevMode()) {
       throwError('Double import of CoreModule');
     }
   }
