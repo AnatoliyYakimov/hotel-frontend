@@ -8,4 +8,5 @@ export interface Room {
   type: RoomType;
   category: RoomCategory;
   facilities: Facility[];
+  dailyPrice: number;
 }

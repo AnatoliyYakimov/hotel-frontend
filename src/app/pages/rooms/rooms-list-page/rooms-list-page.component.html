@@ -1,1 +1,5 @@
-<app-rooms-list [rooms]="rooms$ | async"></app-rooms-list>
+<app-room-filter-from [types]="types$ | async"
+                      [categories]="categories$ | async"
+                      (filterChange)="doFilter($event)">
+</app-room-filter-from>
+<app-rooms-list [rooms]="filteredRooms$ | async"></app-rooms-list>

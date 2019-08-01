@@ -1,4 +1,4 @@
-@import "../../../assets/stylesheets/variables";
+@import "../../../stylesheets/variables";
 
 .footer {
   display: flex;
@@ -7,8 +7,8 @@
   background-color: $primary;
   color: white;
   font-size: medium;
-  margin-top: 60px;
-  padding-top: 10px;
+  margin-top: $grid-unit * 8;
+  padding-top: $grid-unit;
 
   .flex-item {
     text-align: center;

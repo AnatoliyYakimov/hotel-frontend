@@ -1,7 +1,9 @@
 import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {RoomsPageComponent} from './rooms-page/rooms-page.component';
 import {RoomDetailsPageComponent} from './room-details-page/room-details-page.component';
+import {RoomsListPageComponent} from './rooms-list-page/rooms-list-page.component';
+import {RoomsFilterResolver} from './rooms-list-page/rooms-filter-resolver';
 
 
 const routes: Routes = [
@@ -10,11 +12,21 @@ const routes: Routes = [
     component: RoomsPageComponent,
     children: [
       {
+        path: '',
+        component: RoomsListPageComponent,
+        runGuardsAndResolvers: 'paramsOrQueryParamsChange'
+      },
+      {
         path: ':id',
         component: RoomDetailsPageComponent
       }
-    ]
+    ],
+    resolve: {
+      constraints: RoomsFilterResolver
+    },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange'
   }
+
 ];
 
 @NgModule({

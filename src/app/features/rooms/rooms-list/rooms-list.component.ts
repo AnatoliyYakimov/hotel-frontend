@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Room} from '../../../_shared/entities/room/room';
+import {RoomsNamingService} from '../rooms-naming.service';
 
 @Component({
   selector: 'app-rooms-list',
@@ -8,7 +9,9 @@ import {Room} from '../../../_shared/entities/room/room';
 })
 export class RoomsListComponent implements OnInit {
   @Input() rooms: Room[] = [];
-  constructor() {
+
+  constructor(private namingService: RoomsNamingService) {
+    console.log(this.rooms);
   }
 
   ngOnInit() {

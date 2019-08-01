@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-rooms-page',
@@ -7,7 +8,9 @@ import {Component, OnInit} from '@angular/core';
 })
 export class RoomsPageComponent implements OnInit {
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
+    this.route.data.subscribe(x => console.log('Got data from server 111', x));
+
   }
 
   ngOnInit() {

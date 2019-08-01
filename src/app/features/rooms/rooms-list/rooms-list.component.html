@@ -1,3 +1,10 @@
 <ul class="w3-ul" *ngIf="rooms != null && rooms.length > 0">
-  <li *ngFor="let room of rooms">{{room}}</li>
+  <li *ngFor="let room of rooms">
+    <p class="w3-medium">{{this.namingService.formatName(room)}}</p>
+    <p>Мест: {{room.type.places}}</p>
+    <p>Цена за сутки: {{room.dailyPrice}}</p>
+    <mat-divider></mat-divider>
+  </li>
 </ul>
+
+
