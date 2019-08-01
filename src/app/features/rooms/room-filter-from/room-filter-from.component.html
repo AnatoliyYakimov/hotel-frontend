@@ -1,0 +1,37 @@
+<form [formGroup]="_filterForm">
+
+  <mat-form-field>
+    <input matInput formControlName="checkIn" [matDatepicker]="checkInDatepicker" placeholder="Дата заезда">
+    <mat-datepicker-toggle matSuffix [for]="checkInDatepicker"></mat-datepicker-toggle>
+    <mat-datepicker #checkInDatepicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="checkOut" [matDatepicker]="checkOutDatepicker" placeholder="Дата заезда">
+    <mat-datepicker-toggle matSuffix [for]="checkOutDatepicker"></mat-datepicker-toggle>
+    <mat-datepicker #checkOutDatepicker></mat-datepicker>
+  </mat-form-field>
+
+  <button mat-raised-button (click)="onAdvancedSettingsClick()">Дополнительные настройки</button>
+
+  <div [class]="showAdvancedConstraints ? '' : 'w3-hide'">
+    <div class="w3-row">
+      <mat-form-field>1
+        <mat-label>Категории:</mat-label>
+        <mat-select formControlName="categories" multiple>
+          <mat-option *ngIf="categories == undefined" [value]="" disabled="true">Загрузка...</mat-option>
+          <mat-option *ngFor="let cat of categories" [value]="cat">{{cat.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-checkbox formControlName="twinBed">Двуспальная кровать</mat-checkbox>
+    </div>
+    <div class="w3-row">
+      <mat-label>Количество мест:</mat-label>
+      <ng5-slider formControlName="places" [options]="placesSliderOptions"></ng5-slider>
+
+      <mat-label>Цена:</mat-label>
+      <ng5-slider formControlName="price" [options]="priceSliderOptions"></ng5-slider>
+    </div>
+  </div>
+</form>

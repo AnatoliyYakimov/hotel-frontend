@@ -15,8 +15,8 @@ import {RoomType} from '../../../_shared/entities/room/room-type';
   styleUrls: ['./rooms-list-page.component.scss']
 })
 export class RoomsListPageComponent implements OnInit {
-  private rooms$?: Observable<Room[]>;
-  private filteredRooms$?: Observable<Room[]>;
+  private rooms$: Observable<Room[]>;
+  private filteredRooms$: Observable<Room[]>;
 
   private filterConstraints$?: Observable<RoomFilterConstraints>;
 
@@ -48,7 +48,7 @@ export class RoomsListPageComponent implements OnInit {
         const _constraints = value[1];
         const filtered: Room[] = [];
         for (const room of _rooms) {
-          if (RoomsListPageComponent.isSuitable(room, _constraints)) {
+          if (this.isSuitable(room, _constraints)) {
             filtered.push(room);
           }
         }

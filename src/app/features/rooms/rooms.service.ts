@@ -1,4 +1,4 @@
-import {Injectable, Provider} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {EMPTY, Observable} from 'rxjs';
 import {Room} from '../../_shared/entities/room/room';
@@ -61,8 +61,3 @@ export class RoomsService {
   }
 
 }
-
-export const ROOM_SERVICE_PROVIDER: Provider = {
-  provide: RoomsService,
-  useClass: RoomsService
-};

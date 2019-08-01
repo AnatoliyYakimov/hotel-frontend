@@ -1,4 +1,4 @@
-<ul class="w3-ul" *ngIf="rooms != null && rooms.length > 0">
+<ul class="w3-ul">
   <li *ngFor="let room of rooms">
     <p class="w3-medium">{{this.namingService.formatName(room)}}</p>
     <p>Мест: {{room.type.places}}</p>
