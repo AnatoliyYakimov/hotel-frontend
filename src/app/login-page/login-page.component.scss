@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.auth-content {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 250px;
+  padding: 30px;
+  margin: 30px;
+}
+
+.butt-row {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
