@@ -9,6 +9,7 @@ import {CoreModule} from './core/core.module';
 import {SharedModule} from './_shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
 import {MatMomentDateModule} from '@angular/material-moment-adapter';
+import {LoginPageModule} from './login-page/login-page.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {MatMomentDateModule} from '@angular/material-moment-adapter';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatMomentDateModule
+    MatMomentDateModule,
+    LoginPageModule
   ],
   providers: [
     ...INTERCEPTOR_PROVIDER,
