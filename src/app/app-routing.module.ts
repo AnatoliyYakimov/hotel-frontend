@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'rooms',
     loadChildren: './pages/rooms/rooms-pages.module#RoomsPagesModule'
+  },
+  {
+    path: 'profile',
+    loadChildren: './pages/users/users-pages.module#UsersPagesModule'
   }
 ];
 
