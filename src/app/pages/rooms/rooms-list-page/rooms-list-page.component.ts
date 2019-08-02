@@ -20,8 +20,8 @@ export class RoomsListPageComponent implements OnInit {
 
   private filterConstraints$?: Observable<RoomFilterConstraints>;
 
-  private types$: Observable<RoomType[]> = RoomsService.getAllTypes();
-  private categories$: Observable<RoomCategory[]> = RoomsService.getAllCategories();
+  private types$: Observable<RoomType[]> = this.service.getAllTypes();
+  private categories$: Observable<RoomCategory[]> = this.service.getAllCategories();
 
   constructor(private service: RoomsService, private route: ActivatedRoute, private router: Router) {
     this.filterConstraints$ = this.route.data
