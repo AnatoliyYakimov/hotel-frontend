@@ -1,0 +1,52 @@
+<form class="w3-card" #form="ngForm" (ngSubmit)="handleRegistrationClick()">
+
+  <div>
+    <mat-card-header class="head">
+      <mat-card-title>
+        <h1 class="w3-xlarge"> Регистрация </h1>
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content class="auth-content">
+      <mat-form-field>
+        <mat-label>Логин</mat-label>
+        <input matInput type="login" name="login" [(ngModel)]="login" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Пароль</mat-label>
+        <input matInput type="password" name="password" [(ngModel)]="password" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>E-mail</mat-label>
+        <input matInput type="email" name="email" [(ngModel)]="email" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Имя</mat-label>
+        <input matInput type="name" name="name" [(ngModel)]="name" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Фамилия</mat-label>
+        <input matInput type="surname" name="surname" [(ngModel)]="surname" required>
+      </mat-form-field>
+
+      <mat-form-field color="accent" class="datepicker w3-white">
+        <mat-label>Дата рождения</mat-label>
+        <input matInput [matDatepicker]="birthdateDatepicker" [value]="birthdate" placeholder="Дата рождения"
+               type="birthdate" min="1354-01-01" max="2001-08-06" name="birthdate" [(ngModel)]="birthdate" required>
+        <mat-datepicker-toggle matSuffix [for]="birthdateDatepicker"></mat-datepicker-toggle>
+        <mat-datepicker #birthdateDatepicker startView="month"></mat-datepicker>
+      </mat-form-field>
+
+    </mat-card-content>
+
+    <div class="butt-row">
+      <mat-card-actions align="end">
+        <button mat-button type="submit">Регистрация</button>
+      </mat-card-actions>
+    </div>
+  </div>
+</form>
