@@ -8,6 +8,7 @@ cache:
 stages:
   - lint
   - build
+  - publish
 
 before_script:
   - npm config set cache $CI_PROJECT_DIR/.npm
@@ -27,4 +28,15 @@ build:
     paths:
       - dist/
     expire_in: 5 days
+publish:
+  stage: publish
+  script:
+    - npm run build:prod
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 week
+  only:
+    - master
+
 
