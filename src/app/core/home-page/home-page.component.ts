@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import * as moment from 'moment';
 import {Moment} from 'moment';
 import {Router} from '@angular/router';
-import {DATE_CONSTANTS} from '../_shared/date-constants';
+import {DATE_CONSTANTS} from '../../_shared/date-constants';
 
 @Component({
   selector: 'app-home-page',

@@ -4,7 +4,7 @@ import {throwError} from 'rxjs';
 import {HeaderComponent} from './header/header.component';
 import {BodyComponent} from './body/body.component';
 import {FooterComponent} from './footer/footer.component';
-import {HomePageComponent} from '../home-page/home-page.component';
+import {HomePageComponent} from './home-page/home-page.component';
 import {RouterModule} from '@angular/router';
 import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';

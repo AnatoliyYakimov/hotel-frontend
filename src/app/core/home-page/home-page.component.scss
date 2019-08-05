@@ -1,10 +1,10 @@
-@import "../../stylesheets/variables";
+@import "../../../stylesheets/variables";
 
 .landing {
   width: 100%;
   height: $grid-unit * 60;
   background-size: cover;
-  background: url(../../assets/images/hotel.jpeg) center;
+  background: url(../../../assets/images/hotel.jpeg) center;
   color: white;
   text-align: center;
   padding-top: 4%;

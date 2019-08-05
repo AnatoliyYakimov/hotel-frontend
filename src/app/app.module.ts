@@ -8,24 +8,15 @@ import {CoreModule} from './core/core.module';
 import {SharedModule} from './_shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
 import {MatMomentDateModule} from '@angular/material-moment-adapter';
-import {LoginPageModule} from './login-page/login-page.module';
-import {ProfileComponent} from './features/users/profile/profile.component';
-import {
-  MatCardModule,
-  MatDatepickerModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatToolbarModule
-} from '@angular/material';
-import {FormsModule} from '@angular/forms';
+import {LoginPageModule} from './pages/login-page/login-page.module';
+import {MatFormFieldModule} from '@angular/material';
 import {RegistrationPageModule} from './registration-page/registration-page.module';
 import {AdminModule} from './pages/admin/admin.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProfileComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -37,19 +28,11 @@ import {AdminModule} from './pages/admin/admin.module';
     MatMomentDateModule,
     LoginPageModule,
     MatFormFieldModule,
-    MatCardModule,
-    FormsModule,
-    MatDatepickerModule,
-    MatInputModule,
     RegistrationPageModule,
-    MatToolbarModule,
     AdminModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'ru-RU'}
-  ],
-  exports: [
-    ProfileComponent
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {HomePageComponent} from './home-page/home-page.component';
+import {HomePageComponent} from './core/home-page/home-page.component';
 
 
 const routes: Routes = [
@@ -14,13 +14,15 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: './login-page/login-page.module#LoginPageModule'
-  }
-  ,
+    loadChildren: './pages/login-page/login-page.module#LoginPageModule'
+  },
+  {
+    path: 'booking',
+    loadChildren: './pages/rooms/rooms-pages.module#RoomsPagesModule'
+  },
   {
     path: 'admin',
     loadChildren: './pages/admin/admin.module#AdminModule'
-  }
   },
   {
     path: 'profile',
