@@ -9,19 +9,21 @@ const routes: Routes = [
     component: HomePageComponent
   },
   {
-    path: 'rooms',
-    loadChildren: './pages/rooms/rooms-pages.module#RoomsPagesModule'
-  },
-  {
-    path: 'profile',
-    loadChildren: './pages/users/users-pages.module#UsersPagesModule'
+    path: 'registration',
+    loadChildren: './registration-page/registration-page.module#RegistrationPageModule'
   },
   {
     path: 'login',
     loadChildren: './login-page/login-page.module#LoginPageModule'
+  }
+  ,
+  {
+    path: 'admin',
+    loadChildren: './pages/admin/admin.module#AdminModule'
+  }
   },
   {
-    path: 'users',
+    path: 'profile',
     loadChildren: './pages/users/users-pages.module#UsersPagesModule'
   }
 ];
