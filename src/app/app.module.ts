@@ -10,9 +10,16 @@ import {SharedModule} from './_shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
 import {MatMomentDateModule} from '@angular/material-moment-adapter';
 import {LoginPageModule} from './login-page/login-page.module';
-import {MatCardModule, MatDatepickerModule, MatFormFieldModule, MatInputModule} from '@angular/material';
+import {
+  MatCardModule,
+  MatDatepickerModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatToolbarModule
+} from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import {RegistrationPageModule} from './registration-page/registration-page.module';
+import {AdminModule} from './pages/admin/admin.module';
 
 
 @NgModule({
@@ -34,6 +41,8 @@ import {RegistrationPageModule} from './registration-page/registration-page.modu
     MatDatepickerModule,
     MatInputModule,
     RegistrationPageModule,
+    MatToolbarModule,
+    AdminModule
   ],
   providers: [
     ...INTERCEPTOR_PROVIDER,

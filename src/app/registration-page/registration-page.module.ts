@@ -3,8 +3,15 @@ import {CommonModule} from '@angular/common';
 import {RegistrationPageComponent} from './registration-page.component';
 import {FormsModule} from '@angular/forms';
 import {MatButtonModule, MatCardModule, MatFormFieldModule, MatInputModule} from '@angular/material';
-
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {RouterModule, Routes} from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: RegistrationPageComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -17,7 +24,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatInputModule,
     MatDatepickerModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    RouterModule.forChild(routes),
+
   ]
 })
 export class RegistrationPageModule {
