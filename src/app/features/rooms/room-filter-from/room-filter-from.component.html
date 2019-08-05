@@ -12,15 +12,15 @@
     <mat-datepicker #checkOutDatepicker></mat-datepicker>
   </mat-form-field>
 
-  <button mat-raised-button (click)="onAdvancedSettingsClick()">Дополнительные настройки</button>
+  <button mat-button (click)="onAdvancedSettingsClick()"><img src="assets/images/menu-ico.png"/></button>
 
   <div [class]="showAdvancedConstraints ? '' : 'w3-hide'">
     <div class="w3-row">
-      <mat-form-field>1
+      <mat-form-field>
         <mat-label>Категории:</mat-label>
         <mat-select formControlName="categories" multiple>
           <mat-option *ngIf="categories == undefined" [value]="" disabled="true">Загрузка...</mat-option>
-          <mat-option *ngFor="let cat of categories" [value]="cat">{{cat.name}}</mat-option>
+          <mat-option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</mat-option>
         </mat-select>
       </mat-form-field>
 

@@ -16,12 +16,12 @@ import {RoomType} from '../../../_shared/entities/room/room-type';
 })
 export class RoomsListPageComponent implements OnInit {
   private rooms$: Observable<Room[]>;
-  private filteredRooms$: Observable<Room[]>;
+  public filteredRooms$: Observable<Room[]>;
 
-  private filterConstraints$?: Observable<RoomFilterConstraints>;
+  public filterConstraints$?: Observable<RoomFilterConstraints>;
 
-  private types$: Observable<RoomType[]> = this.service.getAllTypes();
-  private categories$: Observable<RoomCategory[]> = this.service.getAllCategories();
+  public types$: Observable<RoomType[]> = this.service.getAllTypes();
+  public categories$: Observable<RoomCategory[]> = this.service.getAllCategories();
 
   constructor(private service: RoomsService, private route: ActivatedRoute, private router: Router) {
     this.filterConstraints$ = this.route.data
@@ -68,6 +68,10 @@ export class RoomsListPageComponent implements OnInit {
     }
   }
 
+  ngOnInit() {
+
+  }
+
   // tslint:disable-next-line:cyclomatic-complexity
   private isSuitable(room: Room, constraints: RoomFilterConstraints): boolean {
     if (constraints == undefined) {
@@ -81,14 +85,13 @@ export class RoomsListPageComponent implements OnInit {
       return false;
     }
     if (!(constraints.categories == undefined) && constraints.categories.length > 0
-      && !constraints.categories.includes(room.category)) {
+      && !constraints.categories.includes(room.category.id)) {
       return false;
     }
-    return !(constraints.twinBed != undefined && constraints.twinBed !== room.type.twinbed);
-
-  }
-
-  ngOnInit() {
+    if (!(constraints.twinBed == undefined) && room.type.twinBed !== JSON.parse(constraints.twinBed as unknown as string)) {
+      return false;
+    }
+    return true;
 
   }
 }

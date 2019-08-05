@@ -25,13 +25,13 @@ import {RoomsFilterResolver} from './rooms-list-page/rooms-filter-resolver';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     RoomsModule,
     RoomsPagesRoutingModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDatepickerModule,
-    SharedModule
+    MatDatepickerModule
   ],
   providers: [
     {

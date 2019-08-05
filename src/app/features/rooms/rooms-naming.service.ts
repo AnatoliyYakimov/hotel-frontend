@@ -11,7 +11,7 @@ export class RoomsNamingService {
 
   formatName(room: Room): string {
     const suffix = this.chooseSuffix(room.type.places);
-    const family = room.type.twinbed ? 'семейный ' : '';
+    const family = room.type.twinBed ? 'семейный ' : '';
     return `${suffix}местный ${family}номер`;
   }
 

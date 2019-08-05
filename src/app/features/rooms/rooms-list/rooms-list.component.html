@@ -1,9 +1,6 @@
 <ul class="w3-ul">
   <li *ngFor="let room of rooms">
-    <p class="w3-medium">{{this.namingService.formatName(room)}}</p>
-    <p>Мест: {{room.type.places}}</p>
-    <p>Цена за сутки: {{room.dailyPrice}}</p>
-    <mat-divider></mat-divider>
+    <app-room-details [room]="room"></app-room-details>
   </li>
 </ul>
 

@@ -4,8 +4,6 @@ import {RoomFilterConstraints} from '../../../_shared/entities/room/room-filter-
 import {Observable, of} from 'rxjs';
 import * as moment from 'moment';
 import {shareReplay} from 'rxjs/operators';
-import {RoomCategory} from '../../../_shared/entities/room/room-category';
-import {Facility} from '../../../_shared/entities/room/facility';
 
 @Injectable()
 export class RoomsFilterResolver implements Resolve<RoomFilterConstraints> {
@@ -22,14 +20,14 @@ export class RoomsFilterResolver implements Resolve<RoomFilterConstraints> {
         : 2,
       twinBed: params.twinBed != undefined ? params.twinBed as boolean
         : undefined,
-      categories: params.categories != undefined ? params.categories as RoomCategory[]
+      categories: params.categories != undefined ? (params.categories as string[]).map(value => Number(value)) as number[]
         : [],
-      facilities: params.facilities != undefined ? params.facilities as Facility[]
+      facilities: params.facilities != undefined ? (params.facilities as string[]).map(value => Number(value)) as number[]
         : [],
-      price: params.price != undefined ? params.price as number[]
+      price: params.price != undefined ? (params.price as string[]).map(value => Number(value)) as number[]
         : [0, 5000]
     };
-    return of(constraints).pipe(shareReplay(1));
+    return of(constraints).pipe(shareReplay());
   }
 
 }

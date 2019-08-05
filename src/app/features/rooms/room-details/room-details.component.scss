@@ -1,0 +1,24 @@
+@import "/~src/stylesheets/_variables";
+
+:host {
+  text-align: left;
+
+}
+
+.twin-bed-ico {
+  height: 4 * $grid-unit;
+  width: 4 * $grid-unit;
+}
+
+.room-name {
+}
+
+.custom-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-button {
+  background: $accent-dark;
+  color: white;
+}

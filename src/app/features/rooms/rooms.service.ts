@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {EMPTY, Observable} from 'rxjs';
+import {Observable} from 'rxjs';
 import {Room} from '../../_shared/entities/room/room';
 import {environment} from '../../../environments/environment';
 import * as moment from 'moment';
@@ -18,14 +18,12 @@ export class RoomsService {
   constructor(private http: HttpClient) {
   }
 
-  static getAllCategories(): Observable<RoomCategory[]> {
-    // return this.http.get<RoomCategory[]>(this.API + '/categories');
-    return EMPTY;
+  getAllCategories(): Observable<RoomCategory[]> {
+    return this.http.get<RoomCategory[]>(this.API + '/categories');
   }
 
-  static getAllTypes(): Observable<RoomType[]> {
-    // return this.http.get<RoomType[]>(this.API + '/types');
-    return EMPTY;
+  getAllTypes(): Observable<RoomType[]> {
+    return this.http.get<RoomType[]>(this.API + '/types');
   }
 
   getFreeRoomsForPeriod(checkIn: Moment, checkOut: Moment): Observable<Room[]> {

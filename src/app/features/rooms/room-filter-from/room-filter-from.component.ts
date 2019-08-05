@@ -7,7 +7,6 @@ import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
 import {RoomType} from '../../../_shared/entities/room/room-type';
 import {RoomCategory} from '../../../_shared/entities/room/room-category';
 import {ActivatedRoute} from '@angular/router';
-import {Facility} from '../../../_shared/entities/room/facility';
 
 @Component({
   selector: 'app-room-filter-from',
@@ -19,15 +18,15 @@ export class RoomFilterFromComponent implements OnInit {
   @Input() categories: RoomCategory[] = [];
   @Output() filterChange = new EventEmitter<RoomFilterConstraints>();
   _filterForm: FormGroup;
-  private showAdvancedConstraints = false;
-  private readonly placesSliderOptions: Options = {
+  public showAdvancedConstraints = false;
+  public readonly placesSliderOptions: Options = {
     floor: 1,
     ceil: 8,
     step: 1,
     noSwitching: true
   };
 
-  private readonly priceSliderOptions: Options = {
+  public readonly priceSliderOptions: Options = {
     floor: 0,
     ceil: 5000,
     step: 50,
@@ -52,10 +51,10 @@ export class RoomFilterFromComponent implements OnInit {
           ? constraints.twinBed as boolean
           : undefined),
         categories: fb.control(constraints.categories != undefined
-          ? constraints.categories as RoomCategory[]
+          ? constraints.categories as number[]
           : []),
         facilities: fb.control(constraints.facilities != undefined
-          ? constraints.facilities as Facility[]
+          ? constraints.facilities as number[]
           : []),
         price: fb.control(constraints.price != undefined
           ? constraints.price as number[]
@@ -78,5 +77,6 @@ export class RoomFilterFromComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }

@@ -15,6 +15,14 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: './pages/users/users-pages.module#UsersPagesModule'
+  },
+  {
+    path: 'login',
+    loadChildren: './login-page/login-page.module#LoginPageModule'
+  },
+  {
+    path: 'users',
+    loadChildren: './pages/users/users-pages.module#UsersPagesModule'
   }
 ];
 

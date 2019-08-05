@@ -10,6 +10,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import {INTERCEPTOR_PROVIDER} from './_interceptors/interceptors-provider';
+import {TOKEN_INTERCEPTOR_PROVIDER} from './_interceptors/token-interceptor';
 
 
 @NgModule({
@@ -31,6 +33,10 @@ import {MatButtonModule} from '@angular/material/button';
     HeaderComponent,
     BodyComponent,
     FooterComponent
+  ],
+  providers: [
+    ...INTERCEPTOR_PROVIDER,
+    TOKEN_INTERCEPTOR_PROVIDER
   ]
 })
 export class CoreModule {
