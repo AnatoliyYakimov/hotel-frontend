@@ -1,0 +1,66 @@
+@import "../../../stylesheets/variables";
+
+.landing {
+  width: 100%;
+  height: $grid-unit * 60;
+  background-size: cover;
+  background: url(../../../assets/images/hotel.jpeg) center;
+  color: white;
+  text-align: center;
+  padding-top: 4%;
+}
+
+/* Прихоть Ани
+.SVINOHARYA_BUTTON{
+  height: 1500px;
+  width: 1500px;
+  font-size: 200px;
+}*/
+
+.date-row {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 25px;
+
+  .date-col {
+    text-align: left;
+    flex-direction: column;
+    margin: $grid-unit;
+
+    .datepicker {
+      flex-wrap: wrap;
+      padding: ($grid-unit/2) ($grid-unit/2) 0 ($grid-unit / 2);
+      //background-color: rgba(255,255,255,0.88);
+      //border: white;
+    }
+  }
+}
+
+.landing-button {
+  width: $grid-unit * 35;
+  height: $grid-unit * 6;
+  line-height: $grid-unit * 6;
+  font-size: x-large;
+  color: white;
+}
+
+.content {
+  margin-top: $grid-unit * 8;
+}
+
+.content-cell {
+  padding: $grid-unit;
+
+  .content-text {
+    padding: $grid-unit;
+  }
+}
+
+.border {
+  height: $grid-unit * 3;
+  width: 100%;
+  background-color: $primary-light;
+}

@@ -1,0 +1,25 @@
+<div class="w3-row">
+  <strong class="room-name">{{this.namingService.formatName(room)}}</strong>
+  <img *ngIf="room.type.twinBed" class="twin-bed-ico" src="assets/images/twinBed.png" alt="Двуспальная кровать"/>
+  <span class="w3-green w3-tag w3-border w3-text-white">{{room.category.name}}</span>
+</div>
+<div class="custom-row">
+  <div>
+    <p>Мест: {{room.type.places}}</p>
+    <p>Цена за сутки: {{room.dailyPrice}}</p>
+  </div>
+  <div *ngIf="room.facilities != undefined && room.facilities.length > 0" class=" w3-margin-left">
+    <h5 class="w3-medium">Удобства:</h5>
+    <ul class="w3-ul">
+      <li *ngFor="let fac of room.facilities">
+        {{fac.name}}
+      </li>
+    </ul>
+  </div>
+  <div class="w3-border-left w3-padding w3-margin-left button-holder">
+    <button mat-raised-button class="booking-button">Забронировать</button>
+  </div>
+</div>
+
+
+

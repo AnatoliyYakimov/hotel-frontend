@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@import 'stylesheets/theme.scss';
+@import "assets/stylesheets/w3.css";
+@import "assets/stylesheets/variables";
+
+@include angular-material-theme($hotel-app-theme);
+html, body {
+  height: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-border {
+  background-color: $primary-dark;
+  height: 25px;
+}

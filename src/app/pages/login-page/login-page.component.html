@@ -1,0 +1,32 @@
+<form class="w3-card" #form="ngForm" (ngSubmit)="handleLoginClick()">
+
+  <div>
+    <mat-card-header class="head">
+      <mat-card-title>
+        <h1 class="w3-xlarge"> Вход в личный кабинет </h1>
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content class="auth-content">
+      <mat-form-field>
+        <mat-label>Логин</mat-label>
+        <input matInput type="login" name="login" [(ngModel)]="login" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Пароль</mat-label>
+        <input matInput type="password" name="password" [(ngModel)]="password" required>
+      </mat-form-field>
+    </mat-card-content>
+
+    <div class="butt-row">
+      <mat-card-actions align="end">
+        <button mat-button type="submit" [disabled]="form.invalid">Вход</button>
+      </mat-card-actions>
+
+      <mat-card-actions align="end">
+        <button mat-button routerLink="/registration">Регистрация</button>
+      </mat-card-actions>
+    </div>
+  </div>
+</form>

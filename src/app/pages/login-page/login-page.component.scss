@@ -1,0 +1,39 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.head {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #607d8b;
+  height: 30px;
+  padding-bottom: 51px;
+  border-bottom: 2px solid darkorange;
+  margin-top: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
+
+}
+
+.auth-content {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 200px;
+  padding: 30px;
+  margin: 30px;
+}
+
+.butt-row {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 15px;
+  color: #3a3a3a;
+}
