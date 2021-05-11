@@ -28,7 +28,7 @@
     "@angular/router": "~8.1.1",
     "@types/jwt-decode": "^2.2.1",
     "jwt-decode": "^2.2.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "moment": "^2.24.0",
     "ng5-slider": "^1.2.4",
     "rxjs": "~6.4.0",
